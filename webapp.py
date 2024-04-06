@@ -6,7 +6,7 @@ from PIL import Image
 import numpy as np
 
 def load_model_json():
-    with open('D:/DS course/Deploy/xception_model.json', 'r') as json_file:
+    with open('xception_model.json', 'r') as json_file:
         loaded_model_json = json_file.read()
     return loaded_model_json
 
