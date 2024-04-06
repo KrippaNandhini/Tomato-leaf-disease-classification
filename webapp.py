@@ -15,7 +15,7 @@ loaded_model_json = load_model_json()
 loaded_model = model_from_json(loaded_model_json)
 
 # Load weights into the loaded model
-loaded_model.load_weights("D:/DS course/Deploy/xception_weights.h5")
+loaded_model.load_weights("xception_weights.h5")
 
 # Function to preprocess the image
 def preprocess_image(image):
