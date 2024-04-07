@@ -34,20 +34,20 @@ def classify_image(image):
 # Streamlit app
 st.title('Tomato Leaf Disease Classifier')
 st.write('This app classifies tomato leaf diseases. The expected outcome is one of the following:')
-        st.markdown("- Tomato Early Blight")
-        st.markdown("- Tomato Late Blight")
-        st.markdown("- Tomato Leaf Mold")
-        st.markdown("- Tomato Septoria Leaf spot")
-        st.markdown("- Tomato Spider Mites")
-        st.markdown("- Tomato Target Spot")
-        st.markdown("- Tomato Yellow Leaf Curl Virus")
-        st.markdown("- Tomato Mosaic Virus")
-        st.markdown("- Tomato Bacterial Spot")
-        st.markdown("- Tomato Healthy")
-        st.markdown('''<style>[data-testid="stMarkdownContainer"] ul{list-style-position: inside;}</style>''', unsafe_allow_html=True)
+st.markdown("- Tomato Early Blight")
+st.markdown("- Tomato Late Blight")
+st.markdown("- Tomato Leaf Mold")
+st.markdown("- Tomato Septoria Leaf spot")
+st.markdown("- Tomato Spider Mites")
+st.markdown("- Tomato Target Spot")
+st.markdown("- Tomato Yellow Leaf Curl Virus")
+st.markdown("- Tomato Mosaic Virus")
+st.markdown("- Tomato Bacterial Spot")
+st.markdown("- Tomato Healthy")
+st.markdown('''<style>[data-testid="stMarkdownContainer"] ul{list-style-position: inside;}</style>''', unsafe_allow_html=True)
 
 
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("Choose an image with single leaf...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
