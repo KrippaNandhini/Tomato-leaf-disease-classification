@@ -67,8 +67,8 @@ if uploaded_file is not None:
 # Get the class name from the dictionary
         # Find the index of the maximum value in the prediction array
         prediction_index = np.argmax(prediction)
-        if np.amax(prediction) < 0.5:
-            st.write("Submit a proper image")
+        if np.amax(prediction) < 0.25:
+            st.write("Submit a proper leaf image")
 
         else:
             class_name = list(class_dict.keys())[list(class_dict.values()).index(prediction_index)]
