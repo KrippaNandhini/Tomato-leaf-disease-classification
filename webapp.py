@@ -33,6 +33,17 @@ def classify_image(image):
 
 # Streamlit app
 st.title('Tomato Leaf Disease Classifier')
+st.write('This app classifies tomato leaf diseases. The expected outcome is one of the following:
+         1. Tomato_Early_Blight
+         2. Tomato_Late_Blight
+         3. Tomato_Leaf_Mold
+         4. Tomato_Septoria_Leaf_spot
+         5. Tomato_Spider_Mites
+         6. Tomato_Target_Spot
+         7. Tomato_Yellow_Leaf_Curl_Virus
+         8. Tomato_Mosaic_Virus
+         9. Tomato_Bacterial_Spot
+         10. Tomato_Healthy')
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
@@ -49,12 +60,12 @@ if uploaded_file is not None:
         # Displaying the predicted class or classes (depending on your output)
         st.subheader('Prediction:')
         # Define your class dictionary
-        class_dict = {'Tomato_Bacterial_spot': 0, 'Tomato_Early_blight': 1, 'Tomato_Late_blight': 2, 'Tomato_Leaf_Mold': 3, 'Tomato_Septoria_leaf_spot': 4, 'Tomato_Spider_mites Two-spotted_spider_mite': 5, 'Tomato_Target_Spot': 6, 'Tomato_Tomato_Yellow_Leaf_Curl_Virus': 7, 'Tomato_Tomato_mosaic_virus': 8, 'Tomato_healthy': 9}
+        class_dict = {'Tomato_Bacterial_spot': 0, 'Tomato_Early_blight': 1, 'Tomato_Late_blight': 2, 'Tomato_Leaf_Mold': 3, 'Tomato_Septoria_leaf_spot': 4, 'Tomato_Spider_mites': 5, 'Tomato_Target_Spot': 6, 'Tomato_Yellow_Leaf_Curl_Virus': 7, 'Tomato_mosaic_virus': 8, 'Tomato_healthy': 9}
 
 # Get the class name from the dictionary
         # Find the index of the maximum value in the prediction array
         prediction_index = np.argmax(prediction)
-        if np.amax(prediction) < 0.05:
+        if np.amax(prediction) < 0.5:
             st.write("Submit a proper image")
 
         else:
