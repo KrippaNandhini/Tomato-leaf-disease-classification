@@ -33,7 +33,7 @@ def classify_image(image):
 
 # Streamlit app
 st.title('Tomato Leaf Disease Classifier')
-st.write('This app classifies tomato leaf diseases. The expected outcome is one of the following:)
+st.write('This app classifies tomato leaf diseases. The expected outcome is one of the following:')
         st.markdown("- Tomato Early Blight")
         st.markdown("- Tomato Late Blight")
         st.markdown("- Tomato Leaf Mold")
