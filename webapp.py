@@ -35,7 +35,7 @@ def classify_image(image):
 st.title('Tomato Leaf Disease Classifier')
 st.write('This app classifies tomato leaf diseases. The expected outcome is one of the following: \
          1. Tomato_Early_Blight \
-         2. Tomato_Late_Blight \ 
+         2. Tomato_Late_Blight \
          3. Tomato_Leaf_Mold \
          4. Tomato_Septoria_Leaf_spot \
          5. Tomato_Spider_Mites \
