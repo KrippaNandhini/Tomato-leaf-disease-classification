@@ -50,6 +50,7 @@ st.markdown('''<style>[data-testid="stMarkdownContainer"] ul{list-style-position
 uploaded_file = st.file_uploader("Choose an image with single leaf...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
+    image = Image.open(uploaded_file)
     if st.button('Classify'):
         with st.spinner('Classifying...'):
             prediction = classify_image(image)
