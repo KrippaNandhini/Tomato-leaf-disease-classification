@@ -33,17 +33,19 @@ def classify_image(image):
 
 # Streamlit app
 st.title('Tomato Leaf Disease Classifier')
-st.write('This app classifies tomato leaf diseases. The expected outcome is one of the following: \
-        {1: Tomato_Early_Blight, 
-         2: Tomato_Late_Blight,
-         3: Tomato_Leaf_Mold, 
-         4: Tomato_Septoria_Leaf_spot,
-         5: Tomato_Spider_Mites,
-         6: Tomato_Target_Spot,
-         7: Tomato_Yellow_Leaf_Curl_Virus,
-         8: Tomato_Mosaic_Virus,
-         9: Tomato_Bacterial_Spot,
-         10: Tomato_Healthy'})
+st.write('This app classifies tomato leaf diseases. The expected outcome is one of the following:)
+        st.markdown("- Tomato Early Blight")
+        st.markdown("- Tomato Late Blight")
+        st.markdown("- Tomato Leaf Mold")
+        st.markdown("- Tomato Septoria Leaf spot")
+        st.markdown("- Tomato Spider Mites")
+        st.markdown("- Tomato Target Spot")
+        st.markdown("- Tomato Yellow Leaf Curl Virus")
+        st.markdown("- Tomato Mosaic Virus")
+        st.markdown("- Tomato Bacterial Spot")
+        st.markdown("- Tomato Healthy")
+        st.markdown('''<style>[data-testid="stMarkdownContainer"] ul{list-style-position: inside;}</style>''', unsafe_allow_html=True)
+
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
