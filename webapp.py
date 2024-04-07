@@ -55,7 +55,7 @@ if uploaded_file is not None:
             prediction = classify_image(image)
             st.write(prediction)
             st.success('Classification done!')
-'''
+
         # Displaying the predicted class or classes (depending on your output)
         st.subheader('Prediction:')
         # Define your class dictionary
@@ -68,4 +68,4 @@ if uploaded_file is not None:
             st.write("Submit a proper leaf image")
         else:
             class_name = list(class_dict.keys())[list(class_dict.values()).index(prediction_index)]
-            st.write(f"Predicted Class: {class_name}")'''
+            st.write(f"Predicted Class: {class_name}")
