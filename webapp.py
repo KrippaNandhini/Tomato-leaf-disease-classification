@@ -50,10 +50,6 @@ st.markdown('''<style>[data-testid="stMarkdownContainer"] ul{list-style-position
 uploaded_file = st.file_uploader("Choose an image with single leaf...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    image = Image.open(uploaded_file)
-    st.image(image, caption='Uploaded Image.', use_column_width=True)
-    st.write("")
-
     if st.button('Classify'):
         with st.spinner('Classifying...'):
             prediction = classify_image(image)
@@ -67,9 +63,8 @@ if uploaded_file is not None:
 # Get the class name from the dictionary
         # Find the index of the maximum value in the prediction array
         prediction_index = np.argmax(prediction)
-        if np.amax(prediction) < 0.25:
+        if np.amax(prediction) < 50:
             st.write("Submit a proper leaf image")
-
         else:
             class_name = list(class_dict.keys())[list(class_dict.values()).index(prediction_index)]
             st.write(f"Predicted Class: {class_name}")
