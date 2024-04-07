@@ -54,7 +54,6 @@ if uploaded_file is not None:
     if st.button('Classify'):
         with st.spinner('Classifying...'):
             prediction = classify_image(image)
-            st.write(prediction)
             st.success('Classification done!')
 
         # Displaying the predicted class or classes (depending on your output)
